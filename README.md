@@ -1,10 +1,28 @@
-# HypeLabs Partner SDK
-
-A C# client for the [HypeLabs Partner API](https://connect.hypelabs.network), for internal .NET services.
+<p align="center">
+  <img src="https://i.imgur.com/NtKvmk2.png" height="100" alt="HypeLabs" />
+</p>
+<h3 align="center">
+  HypeLabs Partner SDK
+</h3>
+<p align="center">
+  The C# client for the HypeLabs Partner API, for internal .NET services. 🚀
+</p>
+<p align="center">
+  <a href="https://connect.hypelabs.network"><img src="https://img.shields.io/badge/API-connect.hypelabs.network-6366f1" /></a>
+  <a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/Made%20With-.NET%2010-512bd4" /></a>
+  <a href="https://learn.microsoft.com/openapi/kiota/"><img src="https://img.shields.io/badge/Generated%20With-Kiota-0078d4" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" /></a>
+</p>
 
 ## Install
 
-Reference the project (or the built package) and configure it with your API key.
+Add a reference to the SDK project:
+
+```bash
+dotnet add reference ../sdk/src/HypeLabs.Partner.Sdk.csproj
+```
+
+Then configure it with your API key (see below).
 
 ## Usage
 
@@ -44,17 +62,3 @@ var customers = await client.Customers.GetAsync();
 ```
 
 The API is authenticated with the `X-Api-Key` header, wired up internally — you never touch the Kiota plumbing.
-
-## Keeping the client up to date
-
-The `Generated/` folder is a Kiota client generated from the live OpenAPI description and **committed** to the
-repo, so builds are offline and reproducible. When the API changes and you want to adopt it, regenerate:
-
-```bash
-./regen.sh                 # pulls from https://connect.hypelabs.network/openapi/v1.json
-git diff Generated/        # review what changed
-git commit -am "Regenerate SDK client"
-```
-
-`regen.sh` requires the Kiota CLI: `dotnet tool install --global Microsoft.OpenApi.Kiota`.
-Point it elsewhere (e.g. staging) with `OPENAPI_URL=… ./regen.sh`.
