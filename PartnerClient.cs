@@ -19,12 +19,29 @@ namespace HypeLabs.Partner.Sdk;
 public sealed class PartnerClient : PartnerApiClient
 {
     /// <summary>
-    /// Creates a client authenticated with the given API key.
+    /// Creates a client authenticated with the given API key, with an internally-managed <see cref="HttpClient"/>.
+    /// Prefer <c>AddPartnerClient</c> in a DI-based app so the HTTP handler is pooled by the factory.
     /// </summary>
     /// <param name="apiKey">A Partner API key (e.g. <c>hl_live_…</c>).</param>
     public PartnerClient(string apiKey)
         : base(new HttpClientRequestAdapter(new ApiKeyAuthenticationProvider(NotEmpty(apiKey))))
     {
+    }
+
+    /// <summary>
+    /// Creates a client that sends its requests through the supplied <see cref="HttpClient"/> — the constructor
+    /// used by the DI factory, which owns the client's lifetime and handler pooling.
+    /// </summary>
+    /// <param name="apiKey">A Partner API key (e.g. <c>hl_live_…</c>).</param>
+    /// <param name="httpClient">The HTTP client to send requests with, typically from <c>IHttpClientFactory</c>.</param>
+    /// <param name="baseUrl">Optional API base URL; leave null to use the SDK default.</param>
+    public PartnerClient(string apiKey, HttpClient httpClient, string? baseUrl = null)
+        : base(new HttpClientRequestAdapter(
+            new ApiKeyAuthenticationProvider(NotEmpty(apiKey)),
+            httpClient: httpClient))
+    {
+        if (!string.IsNullOrWhiteSpace(baseUrl))
+            RequestAdapter.BaseUrl = baseUrl;
     }
 
     private static string NotEmpty(string apiKey) => string.IsNullOrWhiteSpace(apiKey)
