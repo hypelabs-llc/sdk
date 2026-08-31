@@ -4,3 +4,4 @@ obj/
 regen.sh
 openapi.json
 artifacts/
+docs/
