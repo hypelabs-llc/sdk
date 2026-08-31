@@ -3,3 +3,4 @@ obj/
 *.user
 regen.sh
 openapi.json
+artifacts/
