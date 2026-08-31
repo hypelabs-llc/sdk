@@ -16,10 +16,8 @@
 
 ## Install
 
-Add a reference to the SDK project:
-
 ```bash
-dotnet add reference ../sdk/src/HypeLabs.Partner.Sdk.csproj
+dotnet add package HypeLabs.Partner.Sdk
 ```
 
 Then configure it with your API key (see below).
