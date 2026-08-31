@@ -1,0 +1,8 @@
+bin/
+obj/
+*.user
+
+# Fetched OpenAPI spec — regenerated from connect, not source of truth.
+openapi.json
+
+Generated/**
