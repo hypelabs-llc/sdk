@@ -8,11 +8,17 @@
   The C# client for the HypeLabs Partner API, for internal .NET services. 🚀
 </p>
 <p align="center">
+  <a href="https://www.nuget.org/packages/HypeLabs.Partner.Sdk"><img src="https://img.shields.io/nuget/v/HypeLabs.Partner.Sdk?color=512bd4&label=NuGet" /></a>
+  <a href="https://www.nuget.org/packages/HypeLabs.Partner.Sdk"><img src="https://img.shields.io/nuget/dt/HypeLabs.Partner.Sdk?color=512bd4&label=Downloads" /></a>
   <a href="https://connect.hypelabs.network"><img src="https://img.shields.io/badge/API-connect.hypelabs.network-6366f1" /></a>
-  <a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/Made%20With-.NET%2010-512bd4" /></a>
   <a href="https://learn.microsoft.com/openapi/kiota/"><img src="https://img.shields.io/badge/Generated%20With-Kiota-0078d4" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" /></a>
 </p>
+
+## Requirements
+
+- .NET 10.0 or later
+- A HypeLabs Partner API key (`hl_live_…`)
 
 ## Install
 
