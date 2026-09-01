@@ -1,6 +1,6 @@
 {
-  "descriptionHash": "24DE0622C900757488DAFB5875BD6C5E7328D6261AD385382F49E814CDF7D21E4BFE6AD0B7CB93D3CF9D7A0C314538806F4A3965F730C9A253C2740EB0A038BD",
-  "descriptionLocation": "https://connect.hypelabs.network/openapi/v1.json",
+  "descriptionHash": "541DBB4213BBC368F12B0896E2354B3A8CA40A5E05860B2332CC55EAC111B86CB11CE48D88D039DF044B5E9269F305C9A438D2BD9E973E38B02943EBF6E0ECE3",
+  "descriptionLocation": "https://connect.hypelabs.network/openapi/advanced.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.34.1",
   "clientClassName": "PartnerApiClient",
