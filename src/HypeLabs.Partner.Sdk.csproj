@@ -9,7 +9,7 @@
 	<!-- NuGet package metadata. Version is overridden by the release tag in CI (see .github/workflows). -->
 	<PropertyGroup>
 		<PackageId>HypeLabs.Partner.Sdk</PackageId>
-		<Version>0.1.0</Version>
+		<Version>0.1.2</Version>
 		<Authors>HypeLabs, LLC</Authors>
 		<Company>HypeLabs, LLC</Company>
 		<Description>The C# client for the HypeLabs Partner API, for internal .NET services.</Description>
